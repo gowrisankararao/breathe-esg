@@ -1,0 +1,7 @@
+account,meter,commodity,units,start_date,end_date,usage,cost,site
+ACC-44021,MTR-BER-001,electricity,kWh,2024-12-18,2025-01-17,184520,22142.40,Berlin HQ
+ACC-44021,MTR-BER-002,electricity,kWh,2024-12-18,2025-01-17,42100,5052.00,Berlin HQ
+ACC-44055,MTR-MUC-001,electricity,kWh,2025-01-05,2025-02-04,95600,11472.00,Munich Plant
+ACC-44102,MTR-CHI-001,electricity,kWh,2024-11-22,2024-12-21,312800,37536.00,Chicago Office
+ACC-44102,MTR-CHI-001,electricity,kWh,2024-12-22,2025-01-21,-150,0.00,Chicago Office
+ACC-44102,MTR-CHI-002,electricity,kWh,2025-01-01,2025-01-31,89000,10680.00,Chicago Office

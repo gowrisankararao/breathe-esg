@@ -1,0 +1,8 @@
+Report ID|Employee|Expense Type|Transaction Date|Posted Amount|Payment Currency|From Location|To Location|Distance|Business Purpose
+RPT-2025-00821|Smith, Alex|Airfare|2025-01-14|842.50|USD|JFK|LHR||Client workshop London
+RPT-2025-00821|Smith, Alex|Hotel|2025-01-14|456.00|USD|||4|London — 3 nights
+RPT-2025-00845|Chen, Maria|Personal Car Mileage|2025-02-03|124.80|USD|Boston|Providence|82|Site visit
+RPT-2025-00902|Patel, Raj|Airfare|2025-02-20|1205.00|USD|||Client meeting — route missing
+RPT-2025-00902|Patel, Raj|Ground - Taxi|2025-02-20|48.50|USD|SFO Airport|Downtown SF||Airport transfer
+RPT-2025-00988|Williams, Sam|Hotel|2025-03-05|890.00|USD|Chicago|Chicago||Annual conference lodging
+RPT-2025-01001|Brown, Taylor|Airfare|2025-03-12|52000.00|USD|ORD|DFW|925|Regional sales — verify spend
