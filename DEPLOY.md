@@ -38,24 +38,40 @@ If Git asks you to log in, use a **Personal Access Token** (not password):
 
 ---
 
-## Part B — Deploy on Render
+## Part B — Deploy on Render (FREE — no payment)
+
+### Why Render asked for payment
+
+The old `render.yaml` included a **PostgreSQL database**. Render **no longer offers free Postgres**, so it asks you to add a card.
+
+**Fix:** The repo now uses **SQLite** on a **free web service only** (no database addon). Pull the latest code from GitHub before deploying.
 
 ### B1. Create Render account
 
 1. Go to https://render.com
-2. Sign up with **GitHub** (easiest — links your repos)
+2. Sign up with **GitHub**
 
-### B2. Deploy with Blueprint
+### B2. Deploy (choose ONE method)
+
+#### Method 1 — Blueprint (recommended)
 
 1. Dashboard → **New +** → **Blueprint**
-2. Connect GitHub if prompted
-3. Select your **`breathe-esg`** repository
-4. Render detects `render.yaml` and shows:
-   - Web service: `breathe-esg`
-   - Database: `breathe-esg-db`
-5. Click **Apply**
+2. Select repo **`gowrisankararao/breathe-esg`**
+3. You should see **only one** service: `breathe-esg` (no database, no payment)
+4. Click **Apply** → wait 10–15 minutes
 
-Wait 10–15 minutes for the first build. You can watch **Logs**.
+#### Method 2 — Manual (if Blueprint still asks for payment)
+
+1. **New +** → **Web Service**
+2. Connect **`breathe-esg`** repo
+3. Settings:
+   - **Build command:** `./build.sh`
+   - **Start command:** `cd backend && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT`
+   - **Plan:** Free
+4. **Do not** add a PostgreSQL database
+5. Create Web Service
+
+> **Note:** Free SQLite on Render resets if the service is redeployed. `seed_demo` runs on each deploy so login `analyst` / `demo1234` always works.
 
 ### B3. Get your live URL
 

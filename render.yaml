@@ -1,7 +1,9 @@
+# Free deploy: web service only (SQLite). No PostgreSQL — Render charges for databases.
 services:
   - type: web
     name: breathe-esg
     runtime: python
+    plan: free
     buildCommand: "./build.sh"
     startCommand: "cd backend && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
@@ -11,17 +13,9 @@ services:
         value: "false"
       - key: DJANGO_SECRET_KEY
         generateValue: true
-      - key: DATABASE_URL
-        fromDatabase:
-          name: breathe-esg-db
-          property: connectionString
       - key: ALLOWED_HOSTS
         value: ".onrender.com"
       - key: CORS_ALLOWED_ORIGINS
         sync: false
       - key: CSRF_TRUSTED_ORIGINS
         sync: false
-
-databases:
-  - name: breathe-esg-db
-    plan: free
