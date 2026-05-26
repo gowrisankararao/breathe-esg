@@ -29,7 +29,7 @@ git add -A
 git commit -m "Breathe ESG prototype: ingestion and review dashboard"
 
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/breathe-esg.git
+git remote add origin https://github.com/gowrisankararao/breathe-esg.git
 git push -u origin main
 ```
 
