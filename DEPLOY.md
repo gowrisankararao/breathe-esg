@@ -149,7 +149,7 @@ Thank you,
 | Problem | Fix |
 |---------|-----|
 | Build failed on Render | Open **Logs** → look for npm or Python errors; ensure `package-lock.json` is committed |
-| 502 / app not loading | Wait for deploy to finish; check `DATABASE_URL` is linked to Postgres |
+| 502 / app not loading | Wait for deploy to finish; check build logs; do not add a paid database |
 | Login works locally but not on Render | Set `CORS_ALLOWED_ORIGINS` and `CSRF_TRUSTED_ORIGINS` to your Render URL |
 | Static page, no styling | Redeploy after a successful build (frontend must build in `build.sh`) |
 | Very slow first visit | Normal on Render free tier — service sleeps when idle |
